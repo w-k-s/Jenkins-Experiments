@@ -10,7 +10,7 @@ pipeline {
             when{
                 changeset 'Alpha/**'
             }
-            step{
+            steps{
                 build 'Alpha'
             }
         }
@@ -18,7 +18,7 @@ pipeline {
             when{
                 changeset 'Beta/**'
             }
-            step{
+            steps{
                 build 'Beta'
             }
         }
