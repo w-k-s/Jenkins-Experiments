@@ -8,4 +8,11 @@ class ConcatenationTest {
     fun concatenationTests(){
         assertEquals("AB","A"+"B")
     }
+
+    @Test
+    fun formattedStringTest(){
+        val a = "A"
+        val b = "B"
+        assertEquals("AB","$a$b")
+    }
 }
