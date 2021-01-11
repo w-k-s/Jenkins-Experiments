@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     triggers {
+        // Requires Github Plugin
         githubPush()
     }
 
@@ -11,7 +12,7 @@ pipeline {
                 changeset 'Alpha/**'
             }
             steps{
-                build 'Alpha'
+                build 'JenkinsExperiment-Alpha/'+env.BRANCH_NAME
             }
         }
         stage('Build project Beta'){
@@ -19,7 +20,8 @@ pipeline {
                 changeset 'Beta/**'
             }
             steps{
-                build 'Beta'
+                build 'JenkinsExperiment-Beta/'+env.BRANCH_NAME
+
             }
         }
     }

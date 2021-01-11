@@ -13,6 +13,6 @@ class ConcatenationTest {
     fun formattedStringTest(){
         val a = "A"
         val b = "B"
-        assertEquals("AB","$a$b")
+        assertEquals("ABC","$a$bC")
     }
 }
