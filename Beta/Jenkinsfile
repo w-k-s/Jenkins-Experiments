@@ -8,11 +8,10 @@ pipeline {
                 }
             }
             stage('Test and Build') {
-                dir{
-                    './Beta'
-                }
                 steps {
-                    sh './gradlew clean build'
+                    dir("./Beta"){
+                        sh './gradlew clean build'
+                    }
                 }
             }
     }
